@@ -1,0 +1,6 @@
+numpy
+librosa
+matplotlib
+scikit-learn
+music21
+requests
