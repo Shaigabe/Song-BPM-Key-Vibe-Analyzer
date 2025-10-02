@@ -7,7 +7,6 @@ def analyze_vibe(audio_path):
     spectral_centroid = librosa.feature.spectral_centroid(y=y, sr=sr).mean()
     zcr = librosa.feature.zero_crossing_rate(y).mean()
     rms = librosa.feature.rms(y=y).mean()
-    # Improved heuristic for mood
     if tempo > 125 and spectral_centroid > 3000 and rms > 0.03:
         return "Energetic"
     elif tempo < 90 and zcr < 0.05:
